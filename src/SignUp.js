@@ -29,7 +29,7 @@ const SignUp = () => {
         showConfirmButton: false,
         timer: 1500
       });
-      navigate("/Dashboard"); // Redirect after signup
+      navigate("/Shop"); // Redirect after signup
     } catch (error) {
       // Handle specific error codes
       if (error.code === 'auth/email-already-in-use') {
@@ -72,7 +72,7 @@ const SignUp = () => {
         showConfirmButton: false,
         timer: 1500
       });
-      navigate("/Dashboard"); // Redirect after login
+      navigate("/Shop"); // Redirect after login
     } catch (error) {
       Swal.fire({
         title: "Error",

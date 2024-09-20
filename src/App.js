@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import SignUp from "./SignUp"; // If you also have the signup page
+import Dashboard from "./Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Redirect root path "/" to "/signup" */}
+        <Route path="/" element={<Navigate to="/signup" />} />
+        <Route path="/SignUp" element={<SignUp/>}/>
+        <Route path="/Dashboard" element={<Dashboard />}/>
+      </Routes>
+    </Router>
   );
 }
 

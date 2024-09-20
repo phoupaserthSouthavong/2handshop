@@ -58,27 +58,66 @@ const Shop = () => {
         {
             id: 0,
             passID: "cf-01",
-            imageSrc: "img/n6.jpg",
-            name: "suit",
-            description: "ອິທັປປັຈຈະຍະຕາ ແລະ ປະຕິຈະສະມຸປບາທ ແປລາວ ປັນຈະເວຣະພະຍະສູຕຣ. 13/57/41.",
-            price: 50000,
+            imageSrc: "https://sg-test-11.slatic.net/p/2b721d8aaaa94486a2ef5d9ec5c85fa9.jpg_170x170q80.jpg_.webp",
+            name: "Vaseline Pro Derma Niacinamide Brightening Body Lotion 250 Ml.",
+            description: "Vaseline Pro Derma Niacinamide Brightening Body Lotion 1. Repair Combine prebiotics repairing essence with Vaseline Wonder Jelly, to help promote microbiome balance on skin. 2. Enhance Infused with pure Niacinamide, and further boosted with Hexylresorcinol and Resveratrol, to brighten stubborn dull and damaged skin for an even skin tone.",
+            price: 240924,
         },
         {
             id: 1,
             passID: "cf-02",
-            imageSrc: "https://img.ws.mms.shopee.co.th/c378132074457d6cfaf6d0d0d1d54a1d",
-            name: "ເສື້ອແຂນຍາວ",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            price: 75000,
+            imageSrc: "https://th-test-11.slatic.net/p/047dc5090b12d5d645a890bba015567c.jpg_170x170q80.jpg_.webp",
+            name: "Neo Hair Lotion Hair Treatment 120ml",
+            description: "Directions 1. Gently comb your hair 2-3 times 2. Spray Neo Hair Lotion on the Scalp 3. Gently comb the whole scalp. Use regularly morning and night",
+            price: 653000,
         },
         {
             id: 2,
             passID: "cf-03",
-            imageSrc: "https://funkymonkeyshoes.gr/wp-content/uploads/2022/09/Compress_20220906_135017_7246.jpg",
-            name: "ເກີບຜ້າໃບ",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            imageSrc: "https://img.lazcdn.com/g/p/d1e5234d11f115ddc877647fc91ff84b.jpg_200x200q80.jpg_.webp",
+            name: "ເກີບແຟຊັ່ນ ຊັ້ນອ່ອນແລະສະດວກສະບາຍ ໃສ່ກັບຊຸດໃດກໍ່ໄດ້ແລ້ວເຈົ້າຈະເບິ່ງດີ. ສາມາດໃສ່ໄດ້ທຸກເພດທຸກໄວ.",
+            description: "ຄວາມຫນາຂອງເກີບ 2-2.5 ຊມ. ຜະລິດຈາກວັດສະດຸສັງເຄາະ PVC, ແສງສະຫວ່າງແລະສະດວກສະບາຍ. ສະດວກໃນການເຮັດຄວາມສະອາດ, ແຫ້ງໄວ.",
             price: 85000,
         },
+        {
+            id: 4,
+            passID: "cf-04",
+            imageSrc: "https://img.lazcdn.com/g/p/d1e5234d11f115ddc877647fc91ff84b.jpg_200x200q80.jpg_.webp",
+            name: "ເກີບແຟຊັ່ນ ຊັ້ນອ່ອນແລະສະດວກສະບາຍ ໃສ່ກັບຊຸດໃດກໍ່ໄດ້ແລ້ວເຈົ້າຈະເບິ່ງດີ. ສາມາດໃສ່ໄດ້ທຸກເພດທຸກໄວ.",
+            description: "ຄວາມຫນາຂອງເກີບ 2-2.5 ຊມ. ຜະລິດຈາກວັດສະດຸສັງເຄາະ PVC, ແສງສະຫວ່າງແລະສະດວກສະບາຍ. ສະດວກໃນການເຮັດຄວາມສະອາດ, ແຫ້ງໄວ.",
+            price: 85000,
+        },
+        {
+            id: 5,
+            passID: "cf-05",
+            imageSrc: "https://img.lazcdn.com/g/p/d1e5234d11f115ddc877647fc91ff84b.jpg_200x200q80.jpg_.webp",
+            name: "ເກີບແຟຊັ່ນ ຊັ້ນອ່ອນແລະສະດວກສະບາຍ ໃສ່ກັບຊຸດໃດກໍ່ໄດ້ແລ້ວເຈົ້າຈະເບິ່ງດີ. ສາມາດໃສ່ໄດ້ທຸກເພດທຸກໄວ.",
+            description: "ຄວາມຫນາຂອງເກີບ 2-2.5 ຊມ. ຜະລິດຈາກວັດສະດຸສັງເຄາະ PVC, ແສງສະຫວ່າງແລະສະດວກສະບາຍ. ສະດວກໃນການເຮັດຄວາມສະອາດ, ແຫ້ງໄວ.",
+            price: 85000,
+        },
+        {
+            id: 6,
+            passID: "cf-06",
+            imageSrc: "https://img.lazcdn.com/g/p/d1e5234d11f115ddc877647fc91ff84b.jpg_200x200q80.jpg_.webp",
+            name: "ເກີບແຟຊັ່ນ ຊັ້ນອ່ອນແລະສະດວກສະບາຍ ໃສ່ກັບຊຸດໃດກໍ່ໄດ້ແລ້ວເຈົ້າຈະເບິ່ງດີ. ສາມາດໃສ່ໄດ້ທຸກເພດທຸກໄວ.",
+            description: "ຄວາມຫນາຂອງເກີບ 2-2.5 ຊມ. ຜະລິດຈາກວັດສະດຸສັງເຄາະ PVC, ແສງສະຫວ່າງແລະສະດວກສະບາຍ. ສະດວກໃນການເຮັດຄວາມສະອາດ, ແຫ້ງໄວ.",
+            price: 85000,
+        },{
+            id: 7,
+            passID: "cf-07",
+            imageSrc: "https://img.lazcdn.com/g/p/d1e5234d11f115ddc877647fc91ff84b.jpg_200x200q80.jpg_.webp",
+            name: "ເກີບແຟຊັ່ນ ຊັ້ນອ່ອນແລະສະດວກສະບາຍ ໃສ່ກັບຊຸດໃດກໍ່ໄດ້ແລ້ວເຈົ້າຈະເບິ່ງດີ. ສາມາດໃສ່ໄດ້ທຸກເພດທຸກໄວ.",
+            description: "ຄວາມຫນາຂອງເກີບ 2-2.5 ຊມ. ຜະລິດຈາກວັດສະດຸສັງເຄາະ PVC, ແສງສະຫວ່າງແລະສະດວກສະບາຍ. ສະດວກໃນການເຮັດຄວາມສະອາດ, ແຫ້ງໄວ.",
+            price: 85000,
+        },{
+            id: 8,
+            passID: "cf-08",
+            imageSrc: "https://img.lazcdn.com/g/p/d1e5234d11f115ddc877647fc91ff84b.jpg_200x200q80.jpg_.webp",
+            name: "ເກີບແຟຊັ່ນ ຊັ້ນອ່ອນແລະສະດວກສະບາຍ ໃສ່ກັບຊຸດໃດກໍ່ໄດ້ແລ້ວເຈົ້າຈະເບິ່ງດີ. ສາມາດໃສ່ໄດ້ທຸກເພດທຸກໄວ.",
+            description: "ຄວາມຫນາຂອງເກີບ 2-2.5 ຊມ. ຜະລິດຈາກວັດສະດຸສັງເຄາະ PVC, ແສງສະຫວ່າງແລະສະດວກສະບາຍ. ສະດວກໃນການເຮັດຄວາມສະອາດ, ແຫ້ງໄວ.",
+            price: 85000,
+        },
+        
     ];
 
     // State for the cart and cart visibility
@@ -162,10 +201,10 @@ const Shop = () => {
             <section>
                 {products.map((product) => (
                     <div className="phone-card" key={product.id}>
-                        <img src={product.imageSrc} alt={product.name} />
-                        <h2>{product.name}</h2>
+                        <img src={product.imageSrc} alt={product.name}  />
+                        <h2 className='truncate'>{product.name}</h2>
                         <p>ລາຄາ: {formatPrice(product.price)} ກີບ</p>
-                        <p>{product.description}</p>
+                        <p className='truncate'>{product.description}</p>
                         <button onClick={() => addToCart(product)}>ຈັບໃສ່ກະຕ່າ</button>
                     </div>
                 ))}
@@ -174,7 +213,13 @@ const Shop = () => {
             <footer>© ທີມອະນຸລັກສັດປ່າ (ນ້ອງແມວ) 2024</footer>
 
             <style jsx>{`
-                /* General Reset */
+.truncate {
+     display: -webkit-box;               /* Required for the line clamp to work */
+    -webkit-box-orient: vertical;      /* Defines the orientation of the box */
+    -webkit-line-clamp: 2;              /* Limits the text to 2 lines */
+    overflow: hidden;                    /* Hides the overflow text */
+    text-overflow: ellipsis; 
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -272,7 +317,8 @@ section {
 }
 
 .phone-card img {
-    max-width: 100%;
+    width: 220px;
+    height: 210px;
     height: auto;
     border-radius: 8px;
 }

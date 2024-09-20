@@ -4,6 +4,7 @@ import { auth } from "./API/Firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import Swal from 'sweetalert2';
 import { useNavigate } from "react-router-dom";
+<title>{"Wellcome"}</title>
 
 const SignUp = () => {
   const [email, setEmail] = useState("");

@@ -115,16 +115,16 @@ const Shop = () => {
         <div>
             <header>
                 <section className="product">
-                    <div className="box1">
+                    <div>
                         <h1>ເສື້ອຜ້າມືສອງ</h1>
                         {user ? (
                             <div>
-                                <p>User Email: {user.email}</p>
+                                <p>ຜູ້ໃຊ້: {user.email}</p>
                             </div>
                         ) : (
                             <h1>No user is signed in.</h1>
                         )}
-                        <button onClick={handleLogout}>Logout</button>
+                        <button onClick={handleLogout} className='cart-button'>ອອກຈາກລະບົບ</button>
 
                     </div>
 
@@ -171,111 +171,217 @@ const Shop = () => {
                 ))}
             </section>
 
-            <footer>© New fashion 2024</footer>
+            <footer>© ທີມອະນຸລັກສັດປ່າ (ນ້ອງແມວ) 2024</footer>
 
             <style jsx>{`
-                li {
-                    list-style-type: none;
-                }
+                /* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-                body {
-                    font-family: 'Phetsarath OT', 'Times New Roman', Times, serif;
-                    margin: 0;
-                    padding: 0;
-                    background-color: #f4f4f4;
-                }
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
 
-                .product {
-                    background-color: #EAEDED;
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 20px;
-                    width: 100%;
-                }
+body {
+    font-family: 'Phetsarath OT', 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Better readability */
+}
 
-                header {
-                    color: #212F3D;
-                    padding: 10px;
-                    text-align: center;
-                }
+/* List Styles */
+li {
+    list-style-type: none;
+}
 
-                .box1 {
-                    margin-top: 5px;
-                    color: brown;
-                    float:left;
-                }
+/* Header Styles */
+header {
+    background-color: #212F3D;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-                .cart-button {
-                    background-color: #3498DB;
-                    color: white;
-                    border: none;
-                    padding: 10px 10px;
-                    border-radius: 8px;
-                    font-size: 16px;
-                    cursor: pointer;
-                }
+/* Product Section */
+.product {
+    background-color: #EAEDED;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px; /* Add some space below */
+}
 
-                .cart-menu {
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: white;
-                    border: 1px solid #ddd;
-                    border-radius: 8px;
-                    padding: 20px;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                }
+/* Button Styles */
+.cart-button {
+    background: linear-gradient(135deg, #3498DB, #2980B9);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-                section {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    gap: 30px;
-                }
+.cart-button:hover {
+    background: linear-gradient(135deg, #2980B9, #3498DB);
+    transform: scale(1.05);
+}
 
-                .phone-card {
-                    width: 250px;
-                    padding: 10px;
-                    background-color: #fff;
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    text-align: center;
-                    margin: 20px;
-                }
+/* Cart Menu */
+.cart-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other content */
+}
 
-                .phone-card img {
-                    max-width: 100%;
-                    height: auto;
-                    border-radius: 8px;
-                }
+/* Section Styles */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
 
-                .phone-card h2 {
-                    font-size: 20px;
-                    margin: 10px 0;
-                }
+/* Phone Card Styles */
+.phone-card {
+    width: 250px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.2s;
+}
 
-                .phone-card p {
-                    font-size: 14px;
-                    color: #555;
-                }
+.phone-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
 
-                .phone-card button {
-                    background-color: #2ECC71;
-                    color: white;
-                    border: none;
-                    padding: 10px;
-                    border-radius: 8px;
-                    font-size: 16px;
-                    cursor: pointer;
-                }
+.phone-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
-                footer {
-                    text-align: center;
-                    padding: 20px;
-                    background-color: #212F3D;
-                    color: white;
-                }
+.phone-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.phone-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.phone-card button {
+    background-color: #2ECC71;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.phone-card button:hover {
+    background-color: #27AE60; /* Darker green on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #212F3D;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone-card {
+        width: 90%; /* Take up more space on smaller screens */
+        margin: 10px 0; /* Reduce margin */
+    }
+
+    header, footer {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .cart-button {
+        width: 100%; /* Full-width buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-card h2 {
+        font-size: 18px; /* Smaller heading */
+    }
+
+    .phone-card p {
+        font-size: 12px; /* Smaller text */
+    }
+
+    .cart-button {
+        padding: 10px; /* Adjust button padding */
+    }
+}
+
+/* Additional Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+
             `}</style>
         </div>
     );

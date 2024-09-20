@@ -208,7 +208,6 @@ header {
 
 /* Product Section */
 .product {
-    background-color: #EAEDED;
     display: flex;
     justify-content: space-between;
     padding: 20px;

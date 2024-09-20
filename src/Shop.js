@@ -102,14 +102,14 @@ const Shop = () => {
             name: "ອາຫານງົວ 2-3 ເດືອນ / 6 ເດືອນຂຶ້ນໄປ, ຂາຍເປັນ 5 ກິໂລ.",
             description: "ອາຫານງົວ 2-3 ເດືອນ / 6 ເດືອນຂຶ້ນໄປ, ຂາຍເປັນ 5 ກິໂລ.ອາຫານງົວ 2-3 ເດືອນ / 6 ເດືອນຂຶ້ນໄປ, ຂາຍເປັນ 5 ກິໂລ..",
             price: 85000,
-        },{
+        }, {
             id: 7,
             passID: "cf-07",
             imageSrc: "https://img.lazcdn.com/g/p/b7c745412778cabd6b00c6fd5810d8b5.jpg_200x200q80.jpg_.webp",
             name: "ຜ້າຍືດຄໍມົນ ພິມກາຕູນງາມ ເສື້ອແຂນສັ້ນ ແຟຊັນເກົາຫຼີ ນຸ່ງໄດ້ທຸກລະດູ, ທຸກສີ, ທຸກຂະໜາດ, ຂາຍຍ່ອຍ ແລະ ຂາຍສົ່ງ.",
             description: "ສິນຄ້າທຸກໂຕໃນຮ້ານແມ່ນຮັບປະກັນຄຸນນະພາບ, ໝັ້ນໃຈໃນການຊື້. ພວກເຮົາຈະໃຫ້ບໍລິການຫຼັງການຂາຍທີ່ສົມບູນແບບ.",
             price: 99000,
-        },{
+        }, {
             id: 8,
             passID: "cf-08",
             imageSrc: "https://img.lazcdn.com/g/p/396b5ead34c462eecd267563c5fae3ec.jpg_200x200q80.jpg_.webp",
@@ -117,7 +117,7 @@ const Shop = () => {
             description: "ໂມງສາຍແຂນເອເລັກໂຕຣນິກ, ໂມງແຟຊັ່ນສໍາລັບຜູ້ຊາຍແລະແມ່ຍິງ ໂມງອີເລັກໂທຣນິກ LED Square.",
             price: 355000,
         },
-        
+
     ];
 
     // State for the cart and cart visibility
@@ -192,7 +192,7 @@ const Shop = () => {
                                 ))}
                             </ul>
                             <h3>ລວມ: {formatPrice(cart.reduce((total, item) => total + item.price, 0))} ກີບ</h3>
-                            <button onClick={sendOrder}>ສັ່ງຊື້ສິນຄ້າໃນກະຕ່າ</button>
+                            <button onClick={sendOrder} className='cart-button'>ສັ່ງຊື້ສິນຄ້າໃນກະຕ່າ</button>
                         </div>
                     )}
                 </div>
@@ -201,7 +201,7 @@ const Shop = () => {
             <section>
                 {products.map((product) => (
                     <div className="phone-card" key={product.id}>
-                        <img src={product.imageSrc} alt={product.name}  />
+                        <img src={product.imageSrc} alt={product.name} />
                         <h2 className='truncate'>{product.name}</h2>
                         <p>ລາຄາ: {formatPrice(product.price)} ກີບ</p>
                         <p className='truncate'>{product.description}</p>
@@ -288,8 +288,12 @@ header {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Slightly bigger shadow for a more modern look */
+    z-index: 1000;
+    max-width: 90%;        /* Limit max width on larger screens */
+    width: 100%;           /* Ensures it scales to available space */
+    max-height: 90vh;      /* Prevents overflow on smaller screens */
+    overflow-y: auto;      /* Enables scrolling if content overflows */
 }
 
 /* Section Styles */
@@ -358,6 +362,9 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+.cart-menu {
+        max-width: 500px;   /* Sets max width for tablets and up */
+    }
     .product {
         flex-direction: column;
         align-items: center;
@@ -376,10 +383,19 @@ footer {
         width: 100%; /* Full-width buttons */
     }
 }
-
+@media (min-width: 1024px) {
+    .cart-menu {
+        max-width: 600px;   /* Sets max width for larger screens */
+    }
+}
 @media (max-width: 480px) {
     .phone-card h2 {
         font-size: 18px; /* Smaller heading */
+    }
+        .cart-menu {
+        width: 95%;         /* Full width on very small devices */
+        padding: 15px;      /* Reduced padding for smaller viewports */
+        border-radius: 4px; /* Smaller border-radius for a tighter feel */
     }
 
     .phone-card p {

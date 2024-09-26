@@ -1,8 +1,9 @@
 ## Installation
 
 install firebase code:
-
-$ npm i firebase
+```bash
+npm i firebase
+```
 
 install Sweetalert2 code:
 
